@@ -1,0 +1,95 @@
+.inf1-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inf1-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.inf1-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.inf1-info-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inf1-description {
+    background-color: #f0f8ff; /* Light blue background for information */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.inf1-description h2 {
+    font-size: 1.8rem;
+    color: #1a5f7a;
+    margin-bottom: 1rem;
+}
+
+.inf1-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Animation classes */
+.inf1-animate-fade-in {
+    animation: inf1FadeIn 1s ease-out;
+}
+
+.inf1-animate-slide-up {
+    animation: inf1SlideUp 1s ease-out;
+}
+
+/* Keyframe animations */
+@keyframes inf1FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes inf1SlideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Delay animations for a staggered effect */
+.inf1-title {
+    animation-delay: 0.2s;
+}
+
+.inf1-image-container {
+    animation-delay: 0.4s;
+}
+
+.inf1-description {
+    animation-delay: 0.6s;
+}
+
+/* Ensure elements are invisible before animation starts */
+.inf1-title,
+.inf1-image-container,
+.inf1-description {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}

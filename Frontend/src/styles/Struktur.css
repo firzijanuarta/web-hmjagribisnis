@@ -1,0 +1,116 @@
+/* Struktur.css */
+
+.heading-title {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading-title h1 {
+    margin: 0;
+    font-weight: bold; /* Bold heading */
+}
+
+.heading-title img {
+    max-width: 700px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subheading {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.subheading h2 {
+    margin: 0;
+    font-weight: bold; /* Bold subheading */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Hapus bagian untuk menghilangkan garis bawah */
+.subheading h2::after {
+    content: ''; /* Menghapus garis bawah */
+    display: none; /* Menyembunyikan garis bawah */
+}
+
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.large-photos, .small-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust gap between images */
+    justify-content: center;
+}
+
+.photo-item {
+    text-align: center; /* Center text below images */
+}
+
+.large-photo, .small-photo {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.large-photo {
+    width: 200px;
+    height: 250px;
+}
+
+.small-photo {
+    width: 150px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.photo-caption {
+    margin-top: 10px; /* Space between image and caption */
+}
+
+.photo-caption h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold; /* Title bold */
+}
+
+.photo-caption p {
+    margin: 0;
+    font-size: 14px;
+    color: gray; /* Subtitle gray */
+}
+
+/* Slider container should allow absolute positioning for arrows */
+.slider-container {
+    position: relative; /* Allows absolute positioning */
+    width: 100%;
+    max-width: 150px; /* Matches the width of small-photo */
+    margin: 0 auto; /* Center the slider */
+    margin-top: 20px;
+}
+
+/* Ensure the slider item container has relative positioning */
+.slider-item {
+    position: relative; /* Allows arrows to be positioned inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Matches the height of small-photo */
+}
+
+/* Style for the images within the slider */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain image aspect ratio */
+    border-radius: 10px;
+}

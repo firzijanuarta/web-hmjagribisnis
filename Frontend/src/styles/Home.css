@@ -1,0 +1,400 @@
+/* Home section CSS */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-direction: row-reverse;
+}
+
+h2, p {
+  text-decoration: none;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: left;
+  margin: 10px;
+}
+
+.card-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0;
+}
+
+/* Specific styles for the "pengurus" image in the home section */
+section#home .card {
+  width: 400px;
+  height: auto;
+}
+
+section#home .card-image-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+section#home .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.awaldeskripsi {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.description {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: justify; /* Rata kiri dan kanan */
+  max-width: 600px; /* Atur lebar maksimum jika diperlukan */
+}
+
+
+.kolom .deskripsi {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "comic sans ms";
+  color: #364f6b;
+}
+
+h2 {
+  font-family: "comic sans ms";
+  font-weight: 800;
+  font-size: 45px;
+  margin-bottom: 10px;
+  color: #364f6b;
+  width: 100%;
+  line-height: 50px;
+}
+
+a.tbl-pink {
+  background: #364f6b;
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 15px 15px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.tbl-pink:hover {
+  background: #459ebc;
+  text-decoration: none;
+}
+
+/* Departments section */
+.departments {
+  background-color: #1b425a;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 99.8%;
+  margin-bottom: -20px;
+}
+
+.department-card {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.department-card:nth-of-type(3n+1) {
+  margin-bottom: -50px;
+}
+
+.department-image {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.department-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Activities and Informasi sections */
+.activities, .informasi {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.activities-title, .informasi-title {
+  font-size: 36px;
+  color: #364f6b;
+  margin-bottom: -50px;
+  text-align: center;
+}
+
+.activities-cards, .informasi-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-description {
+  text-align: center;
+  font-size: 27px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 150px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Serap Aspirasi section */
+.serap-aspirasi {
+  background-color: #1b425a;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 101.8%;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: -20px;
+}
+
+.serap-aspirasi-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: -50px;
+  text-align: center;
+}
+
+.serap-aspirasi-subtitle {
+  font-size: 16px;
+  color: #dcdcdc;
+  text-align: center;
+  margin-bottom: 5px;
+  max-width: 600px;
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.comment-input {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  resize: none;
+}
+
+.comment-submit {
+  padding: 10px 20px;
+  background-color: #364f6b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.comment-submit:hover {
+  background-color: #2c3e50;
+}
+
+/* Contact Info section */
+.contact-info {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media a {
+  color: #000000;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #1b425a;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  font-size: 20px;
+}
+
+.location,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.location .fa-map-marker-alt,
+.email .fa-envelope {
+  font-size: 20px;
+}
+
+.location span,
+.email span {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.wave-container {
+  width: 103.9%;
+  overflow: hidden;
+  margin-top: -2px;
+}
+
+.wave-container svg {
+  width: 103.9%;
+  height: auto;
+}
+
+.elementor-shape-fill {
+  stroke: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card, .department-card {
+    width: 90%;
+    height: auto;
+  }
+
+  section#home .card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .description {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .activities-cards, .informasi-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .comment-card {
+    width: 100%;
+  }
+
+  .comment-input {
+    width: 100%;
+  }
+
+  .comment-submit {
+    width: 100%;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

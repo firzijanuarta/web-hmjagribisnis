@@ -1,0 +1,247 @@
+/* Animasi slide dari kiri ke kanan */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi slide dari kanan ke kiri */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi slide dari bawah ke atas */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Style untuk wrapper navbar */
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+  width: 100%;
+}
+
+/* Navbar Top berisi logo dan menu */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Menjaga logo dan menu tetap sejajar secara horizontal */
+  width: 97.4vw;
+  padding: 20px 20px;
+  background: #1b425a;
+  position: sticky;
+  margin-top: -30px;
+  z-index: 1;
+  animation: slideInUp 1s ease-out; /* Menambahkan animasi slide dari bawah */
+}
+
+/* Style untuk logo */
+.logo {
+  display: flex;
+  align-items: center;
+  animation: slideInLeft 1s ease-out; /* Menambahkan animasi slide dari kiri */
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 90px;
+  width: auto;
+}
+
+/* Style untuk menu */
+.menu {
+  display: flex;
+  align-items: center;
+  animation: slideInRight 1s ease-out; /* Menambahkan animasi slide dari kanan */
+}
+
+/* Mengatur item menu secara horizontal */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.menu a:hover {
+  color: #459ebc;
+  transform: scale(1.2);
+}
+
+/* Style untuk menu yang berisi dropdown */
+.menu li.dropdown {
+  position: relative;
+}
+
+/* Style untuk dropdown menu */
+.dropdown-menu {
+  display: none; /* Default, tidak terlihat */
+  position: absolute;
+  top: 115%; /* Menempatkan dropdown menu di bawah item menu */
+  left: 0; /* Atur posisi dari kiri sesuai item menu */
+  background: #000000;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  white-space: nowrap; /* Prevent dropdown menu items from wrapping */
+  margin-top: 10px; /* Menambahkan jarak di atas dropdown menu */
+}
+
+/* Menampilkan dropdown menu saat hover pada item menu */
+.menu li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Menghapus garis bawah pada link dropdown menu */
+.dropdown-menu a {
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+  text-decoration: none; /* Menghapus garis bawah */
+  border: none; /* Menghapus border jika ada */
+  box-shadow: none; /* Menghapus shadow jika ada */
+}
+
+/* Mengubah warna link saat hover */
+.dropdown-menu a:hover {
+  color: #1b425a;
+  text-decoration: none; /* Pastikan tidak ada garis bawah saat hover */
+  animation: none;
+  transform: none;
+}
+
+/* Style untuk navbar heading */
+.navbar-heading {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #1b425a; /* Bisa diubah sesuai desain */
+  width: 100vw; /* Sesuaikan dengan lebar konten */
+  animation: slideInUp 1s ease-out; /* Menambahkan animasi slide dari bawah */
+}
+
+.navbar-title {
+  font-size: 70px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.navbar-title-Visimisi {
+  font-size: 70px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.navbar-title-Struktur {
+  font-size: 40px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.navbar-title-default {
+  font-size: 70px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-subtitle {
+  font-size: 23px;
+  margin: 15px 0;
+  color: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar-subtitle-default {
+  font-size: 25px;
+  margin: 0;
+  margin-top: 25px;
+  color: #929292;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wave-container {
+  background-color: #1b425a; /* Background warna sesuai dengan navbar */
+  overflow: hidden; /* Menyembunyikan bagian SVG yang berada di luar kontainer */
+}
+
+.wave-container svg {
+  display: block; /* Menghapus ruang tambahan di bawah SVG */
+  width: 100vw; /* Lebar SVG sesuai dengan lebar viewport */
+  height: auto; 
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+  .navbar-top {
+    flex-direction: column; /* Susun elemen secara vertikal */
+    padding: 10px; /* Atur padding */
+  }
+
+  .menu {
+    flex-direction: column; /* Susun menu secara vertikal */
+    width: 100%; /* Lebar menu 100% */
+  }
+
+  .menu ul {
+    flex-direction: column; /* Susun item menu secara vertikal */
+    gap: 0; /* Menghilangkan jarak antar item */
+  }
+
+  .menu a {
+    padding: 10px; /* Atur padding item menu */
+    font-size: 16px; /* Atur ukuran font */
+  }
+
+  .navbar-heading {
+    padding: 20px 0; /* Atur padding untuk heading */
+  }
+
+  .navbar-title {
+    font-size: 30px; /* Ukuran font untuk judul di mobile */
+  }
+
+  .navbar-subtitle {
+    font-size: 18px; /* Ukuran font untuk subtitle di mobile */
+  }
+
+  .wave-container svg {
+    width: 100%; /* Lebar SVG sesuai dengan lebar kontainer */
+  }
+}

@@ -1,0 +1,16 @@
+#copyright {
+  text-align: center;
+  color: #ffffff;
+  width: 100.8%; /* Lebar fleksibel mengikuti viewport */
+  padding: 1px 5vw; /* Padding fleksibel sesuai ukuran viewport */
+  margin: 1px auto; /* Tetap di tengah dan beri margin atas */
+  background-color: #1b425a;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #copyright {
+    padding: 30px 5vw; /* Sesuaikan padding di layar kecil */
+    width: 95%; /* Lebar lebih besar di perangkat kecil */
+  }
+}

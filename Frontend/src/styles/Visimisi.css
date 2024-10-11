@@ -1,0 +1,67 @@
+.heading-title {
+    text-align: center; /* Untuk memposisikan teks di tengah */
+    font-size: 20px;    /* Ukuran font menjadi 30px */
+    margin: 20px 0;     /* Memberikan jarak atas dan bawah */
+  }
+  
+  .heading-title h1 {
+    margin: 0; /* Menghilangkan margin default pada elemen h1 */
+  }
+
+  /* CSS untuk gambar di dalam heading-title */
+.heading-title img {
+    max-width: 500px; /* Membatasi lebar gambar agar tidak terlalu besar */
+    height: auto;     /* Menjaga rasio aspek gambar */
+    margin-top: 10px; /* Jarak antara teks dan gambar */
+  }
+
+/* Container untuk visi dan misi agar tampil bersebelahan dan berada di tengah */
+.heading-container {
+    display: flex;
+    justify-content: center;   /* Untuk membuat div tetap di tengah */
+    align-items: flex-start;   /* Menjaga konten sejajar di bagian atas */
+    max-width: 1200px;         /* Batas maksimal lebar container */
+    margin: 0 auto;            /* Agar container berada di tengah */
+    gap: 40px;                 /* Jarak antara visi dan misi */
+    padding: 20px;             /* Padding untuk jarak antara konten dan tepi halaman */
+  }
+  
+  /* Gaya untuk bagian Visi dan Misi */
+  .heading-title-visi, .heading-title-misi {
+    width: 48%;                /* Mengatur lebar masing-masing div */
+    text-align: justify;        /* Menyelaraskan teks kiri-kanan */
+  }
+  
+  /* Judul Visi dan Misi */
+  .heading-title-visi h3, .heading-title-misi h3 {
+    font-size: 28px;           /* Ukuran font lebih besar untuk judul */
+    color: #3498db;            /* Warna font untuk judul Visi (biru) */
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .heading-title-misi h3 {
+    color: #3498db;            /* Warna font untuk judul Misi (biru) */
+  }
+  
+  /* Isi teks Visi dan Misi */
+  .heading-title-visi p, .heading-title-misi p {
+    font-size: 18px;           /* Ukuran font untuk isi lebih kecil */
+    color: #333;               /* Warna isi (abu-abu gelap) */
+    line-height: 1.6;          /* Memberikan jarak antara baris */
+    text-align: justify;       /* Menyelaraskan teks kiri dan kanan */
+  }
+  
+  /* Responsif: Jika lebar layar lebih kecil, kedua div akan berada di atas satu sama lain */
+  @media (max-width: 768px) {
+    .heading-container {
+      flex-direction: column;   /* Menumpuk div secara vertikal di layar kecil */
+      gap: 20px;                /* Mengurangi jarak antar div di layar kecil */
+    }
+  
+    .heading-title-visi, .heading-title-misi {
+      width: 100%;              /* Masing-masing div mengambil lebar penuh */
+    }
+
+    
+  }

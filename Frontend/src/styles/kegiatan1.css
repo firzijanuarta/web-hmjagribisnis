@@ -1,0 +1,95 @@
+.kgt1-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .kgt1-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .kgt1-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .kgt1-activity-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .kgt1-description {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .kgt1-description h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .kgt1-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  /* Animation classes */
+  .kgt1-animate-fade-in {
+    animation: kgt1FadeIn 1s ease-out;
+  }
+  
+  .kgt1-animate-slide-up {
+    animation: kgt1SlideUp 1s ease-out;
+  }
+  
+  /* Keyframe animations */
+  @keyframes kgt1FadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes kgt1SlideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Delay animations for a staggered effect */
+  .kgt1-title {
+    animation-delay: 0.2s;
+  }
+  
+  .kgt1-image-container {
+    animation-delay: 0.4s;
+  }
+  
+  .kgt1-description {
+    animation-delay: 0.6s;
+  }
+  
+  /* Ensure elements are invisible before animation starts */
+  .kgt1-title,
+  .kgt1-image-container,
+  .kgt1-description {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }

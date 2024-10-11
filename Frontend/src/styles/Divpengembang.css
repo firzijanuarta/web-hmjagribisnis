@@ -1,0 +1,189 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideInBottom {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .divpengembangan-page {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .divpengembangan-page.fade-in {
+    opacity: 1;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  .slide-in-bottom {
+    animation: slideInBottom 1s ease-out;
+  }
+  
+  .title-container {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .division-description, .activities, .image-slider {
+    margin-bottom: 3rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .proker-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start; /* Rata kiri, tidak ada ruang kosong di tengah */
+  }
+  
+  .proker-item {
+    flex-basis: calc(33.333% - 1rem);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  
+  .proker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+  
+  .proker-header h3 {
+    margin: 0;
+    color: #2980b9;
+    font-size: 1rem;
+  }
+  
+  .chevron {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #2980b9;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .chevron.up {
+    transform: rotate(180deg);
+  }
+  
+  .proker-description {
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+  
+  .sliderdiv-container {
+    position: relative;
+    max-width: 100%; /* Container can take up the full width of the parent */
+    height: auto; /* Allow the height to be dynamic based on the image */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Centering the image */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sliderdiv-image {
+    max-width: 100%; /* Image will scale down if larger than container width */
+    height: auto; /* Maintain the image's aspect ratio */
+    transition: transform 0.3s ease;
+  }
+  
+  
+  
+  .sliderdiv-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slidedivr-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .sliderdiv-button.prev {
+    left: 0;
+  }
+  
+  .sliderdiv-button.next {
+    right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .proker-item {
+      flex-basis: 100%;
+    }
+  
+    .sliderdiv-button {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  }
